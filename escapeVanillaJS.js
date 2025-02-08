@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("directions.json")
       .then((response) => response.json())
       .then((directions) => {
-        navigateLabyrinth(directions).then((message) => {
+        navigateLabyrinth(directions).then(function (message) {
           // 🪲 Bug: Incorrect method
-          document.getElementById("room3Result").innerHTML = message;
+          document.getElementById("room3Result").textContent = message;
         });
       });
   });
