@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("directions.json")
       .then((response) => response.json())
       .then((directions) => {
-        navigateLabyrinth(directions).then(function (message) {
+        navigateLabyrinth(directions).then(async function (message) {
           // 🪲 Bug: Incorrect method
           document.getElementById("room3Result").textContent = message;
         });
